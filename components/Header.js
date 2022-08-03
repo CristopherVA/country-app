@@ -1,14 +1,32 @@
 import React from 'react'
-import { FaMoon } from 'react-icons/fa'
+import { FaMoon, FaSun } from 'react-icons/fa'
+import { useTheme } from 'next-themes'
 function Header() {
+
+  const { theme, setTheme } = useTheme()
+
+  const changeMode = () => {
+    console.log('HOLA')
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
+
   return (
-    <div className='flex items-center justify-between px-6 py-8 text-md text-white bg-dark-blue'>
+    <div className='flex items-center justify-between px-6 py-8 text-md shadow-lg dark:text-white dark:bg-dark-blue'>
       <p className='font-bold'>Where in the world?</p>
     
-      <div className='flex items-center space-x-2 hover:scale-105 ease-in duration-100 active:scale-75 cursor-pointer'>
-         <FaMoon className='w-3 h-3 -rotate-12 hover:rotate-180 duration-200 ease-out' />
-         <p className='text-sm'>Dark Mode</p>
-      </div>
+      <button 
+        onClick={() => changeMode()}
+        className='flex items-center space-x-2 hover:scale-100 ease-in duration-100 active:scale-75 cursor-pointer'>
+         {
+          theme === 'light' 
+            ? ( <FaMoon className='w-3 h-3 -rotate-12 hover:rotate-180 duration-200 ease-out' />) 
+            : (<FaSun className='w-3 h-3 -rotate-12 hover:rotate-180 duration-200 ease-out' />)
+         
+         }
+         <p className='text-sm'>
+          {  theme === 'light' ? 'Dark Mode' : 'Light Mode'  }
+         </p>
+      </button>
     </div>
   )
 }
