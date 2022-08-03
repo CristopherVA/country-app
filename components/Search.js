@@ -1,19 +1,29 @@
 import React from 'react'
 import { FaSearch } from 'react-icons/fa'
 
-function Search() {
+function Search({ value, region, handleChange, handleChangeRegion }) {
 
    return (
       <div className='flex justify-between items-center flex-wrap lg:px-[90px]'>
          <div className='flex items-center bg-dark-blue px-6 py-4 rounded-lg w-[500px]'>
             <FaSearch className='text-white mr-6 ' />
-            <input className=' bg-dark-blue outline-none border-none w-full text-white ' type="text" placeholder='Search for a country...' />
+            <input
+               name='search'
+               value={value}
+               onChange={handleChange}
+               className=' bg-dark-blue outline-none border-none w-full text-white '
+               type="text"
+               placeholder='Search for a country...' 
+            />
          </div>
 
          <div
             className='flex items-center bg-dark-blue px-6 py-4 rounded-lg w-56 mt-10 md:mt-0'
          >
             <select
+               name='region'
+               value={region}
+               onChange={handleChangeRegion}
                className='bg-dark-blue outline-none border-none w-full text-white'
                placeholder='Filter by Region'
             >
