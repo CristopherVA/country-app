@@ -5,11 +5,17 @@ import Header from '../components/Header'
 function DetailCountry({ data }) {
 
    const { push } = useRouter()
+   
+   const currencies = Object.keys(data[0].currencies).map(key =>  {
+      
+      const resp = `${data[0].currencies[key].symbol} - ${data[0].currencies[key].name}`
 
-   const newArray = data.map(cu => ({
-      ...cu,
-      currencies: new Array(cu.currencies)
-   }))
+      return resp  
+   })
+   const languages = Object.keys(data[0].languages).map(key =>  {
+      return data[0].languages[key] + ' '
+      
+   })
 
    return (
       <div className='dark:bg-very-dark-blue-dark-mode h-screen'>
@@ -40,8 +46,8 @@ function DetailCountry({ data }) {
 
                      <div className='space-y-3 sm:ml-8'>
                         <p className='font-normal text-sm'>Top Level Domain: <span className='font-light'>{data[0].tld}</span></p>
-                        <p className='font-normal text-sm'>Currencies: <span className='font-light'>{''}</span></p>
-                        <p className='font-normal text-sm'>Languages: <span className='font-light'>{''}</span></p>
+                        <p className='font-normal text-sm'>Currencies: <span className='font-light'>{currencies}</span></p>
+                        <p className='font-normal text-sm'>Languages: <span className='font-light'>{languages}</span></p>
                      </div>
                   </div>
 

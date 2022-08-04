@@ -7,6 +7,7 @@ import Search from '../components/Search'
 
 export default function Home({ data }) {
 
+  
 
   const [searchInput, setSearchInput] = useState({
     search: '',
@@ -40,13 +41,11 @@ export default function Home({ data }) {
     }
   })
 
-  const { theme, setTheme } = useTheme()
-
   return (
     <Layout>
 
       <div className='px-6 py-8'>
-        
+
         <Search
           value={search}
           region={region}
@@ -59,6 +58,8 @@ export default function Home({ data }) {
           {
             countryFilter.map(item => (
               <CardFlag
+                // keyCurrencies={keyCurrencies}
+                // keyLanguages={keyLanguages}
                 key={item.name.common} data={item}
               />
             ))

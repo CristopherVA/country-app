@@ -4,14 +4,6 @@ import Select from 'react-select'
 
 function Search({ value, region, handleChange, handleChangeRegion }) {
 
-   const options = [
-      { value: 'africa', label: 'Africa' },
-      { value: 'america', label: 'America' },
-      { value: 'asia', label: 'Asia' },
-      { value: 'europa', label: 'Europa' },
-      { value: 'oceania', label: 'Oceania' },
-    ];
-
    return (
       <div className='flex justify-between items-center flex-wrap lg:px-[90px]'>
          <div className='flex items-center dark:bg-dark-blue px-6 py-4 shadow-md rounded-lg w-[500px]'>
@@ -50,11 +42,7 @@ function Search({ value, region, handleChange, handleChangeRegion }) {
 
 
             </select>
-            {/* <Select 
-               option={options}
-               onChange={handleChangeRegion}
-               value={options.map(opt => ({label: opt.label, value: opt.value}))}
-            /> */}
+      
          </div>
 
       </div>
