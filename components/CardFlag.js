@@ -15,7 +15,7 @@ function CardFlag({ data }) {
                query: data.name.common 
             })
          }}
-         className='dark:bg-dark-blue w-64    rounded-md dark:text-white shadow-xl cursor-pointer hover:scale-105 duration-200 ease-in active:scale-75'>
+         className='dark:bg-dark-blue w-64 rounded-md dark:text-white shadow-xl cursor-pointer hover:scale-105 duration-200 ease-in active:scale-75'>
          <img className='rounded-t-md  w-64 h-40' src={data.flags.png} alt={data.name.common} />
 
          <div className='mt-5 px-6 pb-10'>

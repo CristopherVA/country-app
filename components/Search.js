@@ -1,7 +1,16 @@
 import React from 'react'
 import { FaSearch } from 'react-icons/fa'
+import Select from 'react-select'
 
 function Search({ value, region, handleChange, handleChangeRegion }) {
+
+   const options = [
+      { value: 'africa', label: 'Africa' },
+      { value: 'america', label: 'America' },
+      { value: 'asia', label: 'Asia' },
+      { value: 'europa', label: 'Europa' },
+      { value: 'oceania', label: 'Oceania' },
+    ];
 
    return (
       <div className='flex justify-between items-center flex-wrap lg:px-[90px]'>
@@ -30,17 +39,22 @@ function Search({ value, region, handleChange, handleChangeRegion }) {
                name='region'
                value={region}
                onChange={handleChangeRegion}
-               className='dark:bg-dark-blue outline-none border-none w-full  dark:text-white'
+               className='dark:bg-very-dark-blue-dark-mode outline-none border-none w-full dark:text-white'
                placeholder='Filter by Region'
             >
-               <option className='text-sm mx-5' value='africa'>Africa</option>
-               <option className='text-sm mx-5' value='america'>America</option>
-               <option className='text-sm mx-5' value='asia'>Asia</option>
-               <option className='text-sm mx-5' value='europa'>Europa</option>
-               <option className='text-sm mx-5' value='oceania'>Africa</option>
+               <option className='text-sm mx-5 dark:bg-very-dark-blue-dark-mode' value='africa'>Africa</option>
+               <option className='text-sm mx-5 dark:bg-very-dark-blue-dark-mode' value='america'>America</option>
+               <option className='text-sm mx-5 dark:bg-very-dark-blue-dark-mode' value='asia'>Asia</option>
+               <option className='text-sm mx-5 dark:bg-very-dark-blue-dark-mode' value='europa'>Europa</option>
+               <option className='text-sm mx-5 dark:bg-very-dark-blue-dark-mode' value='oceania'>Oceania</option>
 
 
             </select>
+            {/* <Select 
+               option={options}
+               onChange={handleChangeRegion}
+               value={options.map(opt => ({label: opt.label, value: opt.value}))}
+            /> */}
          </div>
 
       </div>

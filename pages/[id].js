@@ -12,9 +12,9 @@ function DetailCountry({ data }) {
    }))
 
    return (
-      <>
+      <div className='dark:bg-very-dark-blue-dark-mode h-screen'>
          <Header />
-         <div className='px-6'>
+         <div className='px-6 '>
             <div
                onClick={() => push({ pathname: '/' })}
                className='dark:text-white  mt-8 flex items-center space-x-2 px-6 w-28 py-1 dark:bg-dark-blue shadow-xl cursor-pointer hover:scale-105 ease-linear duration-100 active:scale-75'>
@@ -57,7 +57,7 @@ function DetailCountry({ data }) {
                </div>
             </div>
          </div>
-      </>
+      </div>
    )
 }
 
