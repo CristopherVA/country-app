@@ -8,9 +8,9 @@ function Search({ value, region, handleChange, handleChangeRegion }) {
          <div className='flex items-center dark:bg-dark-blue px-6 py-4 shadow-md rounded-lg w-[500px]'>
             <FaSearch className='dark:text-white mr-6  ' />
             <input
-               // style={{
-               //    backgroundColor: 'transparent'
-               // }}
+               style={{
+                  backgroundColor: 'transparent'
+               }}
                name='search'
                value={value}
                onChange={handleChange}
@@ -24,9 +24,9 @@ function Search({ value, region, handleChange, handleChangeRegion }) {
             className='flex items-center shadow-md dark:bg-dark-blue px-6 py-4 rounded-lg w-56 mt-10 md:mt-0'
          >
             <select
-               // style={{
-               //    backgroundColor: 'transparent'
-               // }}
+               style={{
+                  backgroundColor: 'transparent'
+               }}
                name='region'
                value={region}
                onChange={handleChangeRegion}

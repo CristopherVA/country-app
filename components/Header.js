@@ -19,13 +19,13 @@ function Header() {
         className='flex items-center space-x-2 hover:scale-100 ease-in duration-100 active:scale-75 cursor-pointer'>
          {
           theme === 'light' 
-            ? ( <FaMoon className='w-3 h-3 -rotate-12 hover:rotate-180 duration-200 ease-out' />) 
-            : (<FaSun className='w-3 h-3 -rotate-12 hover:rotate-180 duration-200 ease-out' />)
+            ? ( <FaMoon className='w-5 h-5 -rotate-12 hover:rotate-180 duration-200 ease-out' />) 
+            : (<FaSun className='w-5 h-5 -rotate-12 hover:rotate-180 duration-200 ease-out' />)
          
          }
-         <p className='text-sm'>
+         {/* <p className='text-sm'>
           {  theme === 'light' ? 'Dark Mode' : 'Light Mode'  }
-         </p>
+         </p> */}
       </button>
     </div>
   )
